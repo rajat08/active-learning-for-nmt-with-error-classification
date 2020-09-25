@@ -1,0 +1,14 @@
+paper/*.aux
+Paper/*.log
+paper/*.out
+paper/*.pdf
+paper/*.synctex.gz
+paper/*.upa
+paper/*.upb
+paper/*.bbl
+paper/*.blg
+paper/biblio.tex
+library.bib
+paper/out/
+paper/__latexindent_temp.tex
+paper/img/*converted*.pdf
