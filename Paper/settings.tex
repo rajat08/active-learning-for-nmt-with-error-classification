@@ -1,0 +1,105 @@
+%Standard packages
+\usepackage{balance}
+\usepackage{color}
+\usepackage{graphicx} %For advances graphics 
+\usepackage{amsmath} %For advanced math symbols
+\usepackage{algorithm2e} %For writing algorithms
+\usepackage[noend]{algorithmic} %For the algorithmic environment
+\usepackage{enumitem}
+\usepackage{booktabs}
+
+\algsetup{linenosize=\scriptsize}
+
+%Collaboration
+\usepackage{fixme}
+%Showing notes only if on draft mode
+%\ifDRAFT
+%	\fxsetup{
+%	    status=draft,
+%    	author={Note},
+%	    layout=pdfnote,
+%    	theme=color,
+%	    silent=true,
+%    	inline=false
+%	}
+%\else
+	\fxsetup{
+    	status=final,
+    	author={Note},
+	    layout=pdfnote,
+    	theme=color,
+	    silent=true,
+    	inline=false
+	}
+%\fi
+
+%Reduce size tools
+%Uncommenting pslatex reduces size 
+%\usepackage{pslatex}
+
+
+%Add page numbering if needed
+%\pagenumbering{arabic}
+%% add page numbering for the latest acm latex template
+% \settopmatter{printfolios=true}
+
+%hide URLs from references
+\newcommand{\showDOI}[1]{\unskip}
+\newcommand{\showURL}[1]{\unskip}
+
+%Used for sub figures
+\usepackage{subcaption}
+
+%Used to "cross out" values
+%\usepackage{cancel}
+
+%Used for drawing vector graphics in tikz
+%\usepackage{tikz}
+%\usetikzlibrary{shapes,arrows,fit,calc,positioning,patterns}
+
+\usepackage{moresize}
+\usepackage{cleveref}
+\crefname{section}{\S}{\S}
+\Crefname{section}{\S}{\S}
+
+%Generate plots directly in latex
+%\usepackage{pgfplots}
+%To fix compatibility issues
+%\pgfplotsset{compat=1.8}
+%Several plots in one figure
+%\usepgfplotslibrary{groupplots}
+
+%Custom commands
+
+
+%Used for doing a variable size ceil in equations
+\usepackage{mathtools}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+
+\newcommand{\eat}[1]{}
+
+%To signify newly added text
+\newcommand{\newtext}[1]{{\color{blue} #1}}
+\newcommand{\placeholder}[1]{{\color{red} #1}}
+%\renewcommand{\newtext}[1]{#1}
+\usepackage{fixme}
+\fxsetup{
+%    status=final,
+    status=draft,
+    author={Note},
+    layout=inline,
+    theme=color,
+    silent=true,
+    inline=true
+}
+
+
+\usepackage{smartdiagram}
+\usepackage{tikz}
+\usetikzlibrary{arrows,positioning}
+
+% placeholder for graphs
+%\usepackage[draft]{pgf}
+\graphicspath{{img/}}
+
