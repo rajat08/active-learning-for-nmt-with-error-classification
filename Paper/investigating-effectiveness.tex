@@ -11,5 +11,14 @@ questions:
 \begin{enumerate}
     \item Are representations generated from pre-trained transformer language models more 
         effective than others with regards to active learning for text labelling?
-    \item 
+    \item Is it required to use standard large models, or can lightweight models be used to 
+        reduce the computational burden for active learning? Are there performance drops?
+    \item Is it more effective to represent a document using aggregate of word embeddings 
+        produced by the model or the CLS token? 
+    \item Can the performance of the active learning system be improveed by using a 
+        transformer-based model by fine-tuning? 
 \end{enumerate}
+
+\cite{lu2020investigating} uses an evaluation based on 8 datasets from different domains
+to show that transformer-based language models consistently outperform more commonly used 
+vector representations like word embeddings or bag-of-words. 
