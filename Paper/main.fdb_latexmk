@@ -1,12 +1,13 @@
 # Fdb version 3
-["bibtex main"] 1602365182 "main.aux" "main.bbl" "main" 1602365182
+["bibtex main"] 1602365337 "main.aux" "main.bbl" "main" 1602365337
+  "./acl_natbib.bst" 1602352572 47585 c671f071a8f3957857acb307a7173505 ""
   "biblio.bib" 1602365153 6679 5618addc6bd94df7e3b6b7ce7c409181 ""
-  "main.aux" 1602365182 3754 874fd6aafeae5d012546d8677d913823 ""
+  "main.aux" 1602365336 3754 874fd6aafeae5d012546d8677d913823 ""
   (generated)
   "main.blg"
   "main.bbl"
-["pdflatex"] 1602365183 "/Users/isidora/Desktop/CS591W1_project/Paper/main.tex" "/Users/isidora/Desktop/CS591W1_project/Paper/main.pdf" "main" 1602365183
-  "/Users/isidora/Desktop/CS591W1_project/Paper/main.aux" 1602365182 3754 874fd6aafeae5d012546d8677d913823 ""
+["pdflatex"] 1602365337 "/Users/isidora/Desktop/CS591W1_project/Paper/main.tex" "/Users/isidora/Desktop/CS591W1_project/Paper/main.pdf" "main" 1602365337
+  "/Users/isidora/Desktop/CS591W1_project/Paper/main.aux" 1602365336 3754 874fd6aafeae5d012546d8677d913823 ""
   "/Users/isidora/Desktop/CS591W1_project/Paper/main.tex" 1602365178 2285 2eb05379f25ae5891d134dc5d12720e0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/helvetic/phvb.tfm" 1480098688 2300 14616918391efa49ac8b481a75fbdc1a ""
@@ -28,9 +29,7 @@
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1480098701 1116 933a60c408fc0a863a92debe84b2d294 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1480098701 1120 8b7d695260f3cff42e636090a8002094 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/latex-fonts/lasy10.tfm" 1480098711 520 82a3d37183f34b6eb363a161dfc002c2 ""
-  "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/latex-fonts/lasy5.tfm" 1480098711 520 d082ac03a1087bc1ec2a06e24a9f68c0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/latex-fonts/lasy6.tfm" 1480098711 520 4889cce2180234b97cad636b6039c722 ""
-  "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/latex-fonts/lasy7.tfm" 1480098711 520 a74c6ed8cb48679fdc3ea874d9d34a7e ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/latex-fonts/lasy8.tfm" 1480098711 520 7bb3abb160b19e0ed6ac404bb59052b7 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/vf/adobe/helvetic/phvb.vf" 1480098757 1516 a73c15525916e6e96ff30639f5ddb11b ""
   "/usr/local/texlive/2018/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf" 1480098758 1372 788387fea833ef5963f4c5bffe33eb89 ""
@@ -74,17 +73,17 @@
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
   "active-learning.tex" 1602365077 3141 975c2738c121283b3070c2b24cfc0db6 ""
   "eacl2021.sty" 1602352573 22148 f98ba96f18c320e51d5f985ebeddf2c4 ""
-  "error-classification.tex" 1602365086 1447 ae6fb8bde7d0dfda9cffef78d1e1c823 ""
+  "error-classification.tex" 1602365334 1444 bd130a1dbac1ccbd3321848b44bbda9e ""
   "linguistic-representations.tex" 1602365094 646 7fdb6aa1c2912425e67a3479f0b3e116 ""
-  "main.aux" 1602365182 3754 874fd6aafeae5d012546d8677d913823 ""
-  "main.bbl" 1602365183 7097 024e6d0fd10a76a993fd2cb5c24a827e "bibtex main"
-  "main.out" 1602365182 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "main.aux" 1602365336 3754 874fd6aafeae5d012546d8677d913823 ""
+  "main.bbl" 1602365337 7097 024e6d0fd10a76a993fd2cb5c24a827e "bibtex main"
+  "main.out" 1602365336 0 d41d8cd98f00b204e9800998ecf8427e ""
   "main.tex" 1602365178 2285 2eb05379f25ae5891d134dc5d12720e0 ""
   "related.tex" 1602365168 550 0f42bad773956cc096b6fb3f72843594 ""
   (generated)
-  "/Users/isidora/Desktop/CS591W1_project/Paper/main.pdf"
-  "main.out"
-  "/Users/isidora/Desktop/CS591W1_project/Paper/main.log"
   "main.pdf"
-  "main.aux"
   "main.log"
+  "/Users/isidora/Desktop/CS591W1_project/Paper/main.log"
+  "/Users/isidora/Desktop/CS591W1_project/Paper/main.pdf"
+  "main.aux"
+  "main.out"
