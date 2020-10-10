@@ -1,10 +1,9 @@
-Recent work in machine translation approaches has focused on integrating active learning
-with interaction-based neural machine translation. These modifications have been experimentally 
-employed with unbounded real-time streaming data \cite{peris2020active} with the objective of selecting 
-only those sentences which are very difficult for the translation system to accurately classify upon 
-during the initial stages. Results have shown promise in improving the overall quality of translation 
-and reducing human intervention in the process. A core component of this approach involves tweaking the 
-sampling strategies involved to maximize the probability of selecting only the most “difficult” sentences. 
-However, these results have a lack of representation and probable efficacy with respect to low-resource-based 
-multilingual paradigms. The effectiveness of slight alterations in the overall encoder-decoder transformer 
-network also needs to be experimented upon to possibly generate higher quality translations. 
+\subsection{Active learning for interactive neural machine translation of data streams}
+\label{active-learning-interactive}
+
+
+A series of recent research works discuss and introduce a variety of model- and data-based methods to select the most informative samples to improve an NMT's performance.
+\citet{zhang2018active} propose two active learning techniques for sentence selection, based on semantic similarity between the sentence embeddings and decoder probability as a token of translation quality, while \citet{peris2020active} explore the application of active learning methods in the interactive translation of large data streams. The latter work uses the attention mechanism of a neural machine translation system to select only those sentences worthy of human annotation for translation. 
+In a more recent approach, \citet{zeng2019empirical} perform an empirical evaluation of different AL methods for Transformers \cite{vaswani2017attention}, analyzing data-driven approaches, that sample instances based only on two sets of labeled and unlabeled sentences, and model-driven methods, which additionally incorporate information from the current model into sampling. 
+However their work notes the weak performance of Coverage Sampling compared to the other techniques, due to the complex nature of the state-of-the art multi-layer multi-head Natural Language Processing architectures, a phenomenon we are addressing with the current work.
+A series of works explored the shortcomings of Active Learning approaches in Machine Translation. \cite{lowell2018practical} observe the performance drop issues arising in applying Active Learning across different models and tasks and discuss the methods' generalization constraints. Similarly, \citet{koshorek2019limits} examine the potential and limitations of an oracle policy in selecting samples to maximize the performance of a neural machine translation system in learning sentence semantic representations, concluding on a non-significant difference with a random sentence selection approach.
