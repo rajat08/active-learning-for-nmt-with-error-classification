@@ -21,6 +21,8 @@ if __name__ == '__main__':
 
     fceCorpusHandler.get_train_dev_test_sets()
 
-    fceCorpusHandler.xml_to_txt(data_type="train")
-    fceCorpusHandler.xml_to_txt(data_type="dev")
-    fceCorpusHandler.xml_to_txt(data_type="test")
+    # fceCorpusHandler.xml_to_txt(data_type="train")
+    # fceCorpusHandler.xml_to_txt(data_type="dev")
+    # fceCorpusHandler.xml_to_txt(data_type="test")
+    
+    fceCorpusHandler.parse_data()

@@ -57,7 +57,8 @@ class FCECorpusHandler:
             # Delete .tar.gz file
             os.remove(targz_fce_filename)
         else:
-            print("FCE Error Detection Corpus has already been downloaded in: {}".format(self.fce_error_detection_dir))
+            print("FCE Error Detection Corpus has already been downloaded in: {}".format(
+                self.fce_error_detection_dir))
 
     def download_fce_corpus(self):
         """ Check if FCE Corpus exists and only download it if it doesn't
@@ -96,7 +97,8 @@ class FCECorpusHandler:
 
         # Separate train, dev, test
         train_dev_test_path = self.fce_error_detection_dir + '/filenames/'
-        train_dev_test_files = [f for f in os.listdir(train_dev_test_path) if f.endswith('.txt')]
+        train_dev_test_files = [f for f in os.listdir(
+            train_dev_test_path) if f.endswith('.txt')]
         print(train_dev_test_files)
         for file in train_dev_test_files:
             set_dir = self.fce_dir + '/' + file.split('.')[1] + '/'
@@ -112,7 +114,8 @@ class FCECorpusHandler:
     def xml_to_txt(self, data_type='train', verbose=False):
         print("\nGet train-dev-test sets")
         fce_dir_dataset = '{}/{}/'.format(self.fce_dir, data_type)
-        train_dev_test_files = [f for f in os.listdir(fce_dir_dataset) if f.endswith('.xml')]
+        train_dev_test_files = [f for f in os.listdir(
+            fce_dir_dataset) if f.endswith('.xml')]
 
         # Convert from xml to txt
         incorrect_sentences = []
@@ -124,7 +127,8 @@ class FCECorpusHandler:
             mydoc = minidom.parse(fce_dir_dataset + f)
             items_essay = mydoc.getElementsByTagName('p')
             for item_essay in items_essay:
-                incorrect_sent, correct_sent = self.strip_str(item_essay, verbose=verbose)
+                incorrect_sent, correct_sent = self.strip_str(
+                    item_essay, verbose=verbose)
                 incorrect_sentences.append(incorrect_sent)
                 correct_sentences.append(correct_sent)
 
@@ -147,6 +151,7 @@ class FCECorpusHandler:
     def strip_str(self, item_essay, verbose=False):
         incorrect_sent = ''
         correct_sent = ''
+        error_tags = ''
         for child in item_essay.childNodes:
             if child.localName is None:  # no child nodes
                 segment = child.data
@@ -155,12 +160,14 @@ class FCECorpusHandler:
                 # print(segment)
             else:  # 'NS', 'i', 'c'
                 inc_sent, cor_sent = self.recursive_NS_tag_strip(child)
+                if child._attrs is not None:
+                    error_tags += child._attrs['type'].value + ","
                 incorrect_sent += inc_sent
                 correct_sent += cor_sent
         if verbose:
             print("Incorrect sentence: " + incorrect_sent)
             print("Correct sentence: " + correct_sent)
-        return incorrect_sent, correct_sent
+        return incorrect_sent, correct_sent, error_tags
 
     def recursive_NS_tag_strip(self, item_ns):
         incorrect_sent = ''
@@ -199,3 +206,28 @@ class FCECorpusHandler:
         file.write(text)
         file.close()
 
+    def parse_data(self, data_type='train', verbose=False):
+        print("\Get train-dev-test sets")
+        fce_dir_dataset = '{}/{}/'.format(self.fce_dir, data_type)
+        train_dev_test_files = [f for f in os.listdir(
+            fce_dir_dataset) if f.endswith('.xml')]
+
+        # convert xml to txt
+        incorrect_sentences = []
+        correct_sentences = []
+        error_tags = []
+
+        for f in train_dev_test_files:
+            if verbose:
+                print()
+                print(f)
+            mydoc = minidom.parse(fce_dir_dataset + f)
+            items_essay = mydoc.getElementsByTagName('p')
+            for item_essay in items_essay:
+                incorrect_sent, correct_sent, error_sent = self.strip_str(
+                    item_essay, verbose=verbose)
+                incorrect_sentences.append(incorrect_sent)
+                correct_sentences.append(correct_sent)
+                error_tags.append(error_sent)
+        
+        print(error_tags)
