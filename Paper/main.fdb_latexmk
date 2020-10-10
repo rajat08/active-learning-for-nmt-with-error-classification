@@ -1,15 +1,15 @@
 # Fdb version 3
-["bibtex main"] 1602348007 "main.aux" "main.bbl" "main" 1602348007
+["bibtex main"] 1602348007 "main.aux" "main.bbl" "main" 1602348977
   " biblio.bib" 0 -1 0 ""
   "./acl_natbib.bst" 1602314204 47585 c671f071a8f3957857acb307a7173505 ""
   "anthology.bib" 1602314204 35724382 7579d629f1885d6a7c7a5a6c9c2f402b ""
   "eacl2021.bib" 1602314204 1974 4d7084b2f3a55753e2f48da8052bb437 ""
-  "main.aux" 1602347876 2221 5c5e53b746caaecdacaad8f1c3b045f8 ""
+  "main.aux" 1602348633 2221 5c5e53b746caaecdacaad8f1c3b045f8 ""
   (generated)
-  "main.bbl"
   "main.blg"
-["pdflatex"] 1602347876 "/Users/isidora/Desktop/CS591W1_project/Paper/main.tex" "/Users/isidora/Desktop/CS591W1_project/Paper/main.pdf" "main" 1602348007
-  "/Users/isidora/Desktop/CS591W1_project/Paper/main.aux" 1602347876 2221 5c5e53b746caaecdacaad8f1c3b045f8 ""
+  "main.bbl"
+["pdflatex"] 1602347876 "/Users/isidora/Desktop/CS591W1_project/Paper/main.tex" "/Users/isidora/Desktop/CS591W1_project/Paper/main.pdf" "main" 1602348977
+  "/Users/isidora/Desktop/CS591W1_project/Paper/main.aux" 1602348633 2221 5c5e53b746caaecdacaad8f1c3b045f8 ""
   "/Users/isidora/Desktop/CS591W1_project/Paper/main.tex" 1602347853 2239 2497b82e89036f76096a4de58b80c87d ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
@@ -76,19 +76,19 @@
   "/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1523934492 2717033 f61a5287d9c22a39a74f1979fe3f905c ""
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1523934516 4220280 10cab8fbd7c5a7c52aba9917e190d018 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
-  "active-learning-interactive.tex" 1602347984 2049 257e1ea0d1cd5c3a556de1019208e154 ""
+  "active-learning-interactive.tex" 1602348976 2049 257e1ea0d1cd5c3a556de1019208e154 ""
   "eacl2021.sty" 1602314204 22148 f98ba96f18c320e51d5f985ebeddf2c4 ""
   "error-classification.tex" 1602346862 1533 4c306ae9eda59057f925432e595d0492 ""
   "investigating-effectiveness.tex" 1602314204 1710 29d77a96e7a81e0449595ee46c09eb1d ""
-  "main.aux" 1602347876 2221 5c5e53b746caaecdacaad8f1c3b045f8 ""
-  "main.bbl" 0 -1 0 "bibtex main"
-  "main.out" 1602347876 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "main.aux" 1602348633 2221 5c5e53b746caaecdacaad8f1c3b045f8 ""
+  "main.bbl" 1602348641 121 176ef3ab05ccef1cd7a1f3b4a71ca9dc "bibtex main"
+  "main.out" 1602348633 0 d41d8cd98f00b204e9800998ecf8427e ""
   "main.tex" 1602347853 2239 2497b82e89036f76096a4de58b80c87d ""
   "related.tex" 1602347952 532 8eb3c018c1e16be5637c4747ef71f261 ""
   (generated)
-  "main.pdf"
-  "/Users/isidora/Desktop/CS591W1_project/Paper/main.log"
+  "main.log"
   "main.out"
   "/Users/isidora/Desktop/CS591W1_project/Paper/main.pdf"
+  "main.pdf"
+  "/Users/isidora/Desktop/CS591W1_project/Paper/main.log"
   "main.aux"
-  "main.log"
