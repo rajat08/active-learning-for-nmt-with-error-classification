@@ -12,3 +12,8 @@ library.bib
 Paper/out/
 Paper/__latexindent_temp.tex
 Paper/img/*converted*.pdf
+
+Scripts/FCE_Parser/data/*
+Scripts/FCE_Parser/results/*
+Scripts/data/*
+Scripts/results/*

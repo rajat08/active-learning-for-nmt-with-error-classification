@@ -222,12 +222,18 @@ class FCECorpusHandler:
                 print()
                 print(f)
             mydoc = minidom.parse(fce_dir_dataset + f)
-            items_essay = mydoc.getElementsByTagName('p')
-            for item_essay in items_essay:
-                incorrect_sent, correct_sent, error_sent = self.strip_str(
-                    item_essay, verbose=verbose)
-                incorrect_sentences.append(incorrect_sent)
-                correct_sentences.append(correct_sent)
-                error_tags.append(error_sent)
+            # fetch each answer in doc
+            answer = mydoc.getElementsByTagName('coded_answer')
+            # items_essay = mydoc.getElementsByTagName('p')
+
+            # loop through every answer/essay
+            for ans in answer: 
+                items_essay = ans.getElementsByTagName('p')
+                for item_essay in items_essay:
+                    incorrect_sent, correct_sent, error_sent = self.strip_str(
+                        item_essay, verbose=verbose)
+                    incorrect_sentences.append(incorrect_sent)
+                    correct_sentences.append(correct_sent)
+                    error_tags.append(error_sent)
         
         print(error_tags)
