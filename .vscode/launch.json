@@ -1,0 +1,31 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: fce_parser",
+            "type": "python",
+            "request": "launch",
+            "program": "Scripts/FCE_Parser/main_xml_to_txt.py",
+            "args": [
+                "--fce_xml_dir",
+                "Scripts/data/",
+                "--results_dir",
+                "Scripts/data/fce_txt/"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: conll14_parser",
+            "type": "python",
+            "request": "launch",
+            "program": "Scripts/CONLL14_Parser/parser.py",
+            "args": [
+                
+            ],
+            "console": "integratedTerminal"
+        }
+    ]
+}
