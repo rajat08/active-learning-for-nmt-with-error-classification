@@ -8,6 +8,8 @@ import tarfile
 from collections import defaultdict
 import shutil
 import glob
+from bs4 import BeautifulSoup
+import csv
 
 __author__ = "Gwena Cunha"
 
@@ -152,22 +154,35 @@ class FCECorpusHandler:
         incorrect_sent = ''
         correct_sent = ''
         error_tags = ''
+        errors = []
+        pos = 0
         for child in item_essay.childNodes:
             if child.localName is None:  # no child nodes
                 segment = child.data
                 incorrect_sent += segment
                 correct_sent += segment
+
+                # increment pos 
+                pos += len(segment)
                 # print(segment)
             else:  # 'NS', 'i', 'c'
                 inc_sent, cor_sent = self.recursive_NS_tag_strip(child)
-                if child._attrs is not None:
-                    error_tags += child._attrs['type'].value + ","
                 incorrect_sent += inc_sent
                 correct_sent += cor_sent
+                if child._attrs is not None:
+                    # to get incorrect word, incorrect_sent[errors[err_no]["start_off"]: errors[err_no]["end_off"]]
+                    errors.append({"tag": child._attrs['type'].value, "incorrect": inc_sent, "correct": cor_sent, "start_off": pos, 
+                    "end_off": pos + len(inc_sent)})
+                else: 
+                    print("No Error tag!; In-Correct:", inc_sent, "Correct:", cor_sent)    
+
+                # update pos
+                pos += len(inc_sent)
+
         if verbose:
             print("Incorrect sentence: " + incorrect_sent)
             print("Correct sentence: " + correct_sent)
-        return incorrect_sent, correct_sent, error_tags
+        return incorrect_sent, correct_sent, errors
 
     def recursive_NS_tag_strip(self, item_ns):
         incorrect_sent = ''
@@ -212,10 +227,7 @@ class FCECorpusHandler:
         train_dev_test_files = [f for f in os.listdir(
             fce_dir_dataset) if f.endswith('.xml')]
 
-        # convert xml to txt
-        incorrect_sentences = []
-        correct_sentences = []
-        error_tags = []
+        fields = ["incorrect", "correct", "error"]
 
         for f in train_dev_test_files:
             if verbose:
@@ -227,13 +239,49 @@ class FCECorpusHandler:
             # items_essay = mydoc.getElementsByTagName('p')
 
             # loop through every answer/essay
+            ans_count = 0
             for ans in answer: 
+                # convert xml to txt
+                incorrect_sentences = []
+                correct_sentences = []
+                error_tags = []
+
                 items_essay = ans.getElementsByTagName('p')
+                ans_count += 1
+                output = []
+
                 for item_essay in items_essay:
-                    incorrect_sent, correct_sent, error_sent = self.strip_str(
+                    incorrect_sent, correct_sent, errors = self.strip_str(
                         item_essay, verbose=verbose)
-                    incorrect_sentences.append(incorrect_sent)
-                    correct_sentences.append(correct_sent)
-                    error_tags.append(error_sent)
+                    # incorrect_sentences.append(incorrect_sent)
+                    # correct_sentences.append(correct_sent)
+                    # error_tags.append(errors)
+                    for error in errors: 
+                        output.append({"incorrect": incorrect_sent, "correct": correct_sent, "error": error})
+                
+                
+                fce_txt_dir_dataset = '{}{}/{}/'.format(self.results_dir, data_type, os.path.splitext(f)[0])
+                utils.ensure_dir(fce_txt_dir_dataset)
+                print(fce_txt_dir_dataset)
+
+                outfile_name = fce_txt_dir_dataset+"essay_"+str(ans_count)+".csv"
+                with open(outfile_name, "w") as outfile: 
+                    writer = csv.DictWriter(outfile, fieldnames=fields)
+                    writer.writeheader()
+                    writer.writerows(output)
+                
+                
+
+        print("Finished writing {} files".format(data_type))
+
+
+            # with open(fce_dir_dataset + f) as current_file: 
+            #     text = current_file.read()
+            #     soup = BeautifulSoup(text, "lxml")
+            #     answers = soup.find_all('coded_answer')
+
+            #     for ans in answers: 
+            #         essay = ans.find_all('p')
+            #         print()
         
-        print(error_tags)
+        # print(error_tags)
