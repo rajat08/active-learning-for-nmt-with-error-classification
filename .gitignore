@@ -17,3 +17,5 @@ Scripts/FCE_Parser/data/*
 Scripts/FCE_Parser/results/*
 Scripts/data/*
 Scripts/results/*
+
+Scripts/CONLL14_Parser/data/*
