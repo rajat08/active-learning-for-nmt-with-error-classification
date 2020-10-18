@@ -227,7 +227,7 @@ class FCECorpusHandler:
         train_dev_test_files = [f for f in os.listdir(
             fce_dir_dataset) if f.endswith('.xml')]
 
-        fields = ["incorrect", "correct", "error"]
+        fields = ["incorrect", "correct", "error_tag", "inc_word", "cor_word", "start_off", "end_off"]
 
         all_output = []
         for f in train_dev_test_files:
@@ -258,8 +258,10 @@ class FCECorpusHandler:
                     # correct_sentences.append(correct_sent)
                     # error_tags.append(errors)
                     for error in errors: 
-                        output.append({"incorrect": incorrect_sent, "correct": correct_sent, "error": error})
-                        all_output.append({"incorrect": incorrect_sent, "correct": correct_sent, "error": error})
+                        output.append({"incorrect": incorrect_sent, "correct": correct_sent, "error_tag": error['tag'],
+                         "inc_word": error['incorrect'], "cor_word": error['correct'], "start_off": error['start_off'], "end_off":['end_off']})
+                        all_output.append({"incorrect": incorrect_sent, "correct": correct_sent, "error_tag": error['tag'],
+                         "inc_word": error['incorrect'], "cor_word": error['correct'], "start_off": error['start_off'], "end_off":['end_off']})
                 
                 
                 fce_txt_dir_dataset = '{}{}/{}/'.format(self.results_dir, data_type, os.path.splitext(f)[0])
