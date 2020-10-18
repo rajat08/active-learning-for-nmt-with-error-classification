@@ -229,6 +229,7 @@ class FCECorpusHandler:
 
         fields = ["incorrect", "correct", "error"]
 
+        all_output = []
         for f in train_dev_test_files:
             if verbose:
                 print()
@@ -258,6 +259,7 @@ class FCECorpusHandler:
                     # error_tags.append(errors)
                     for error in errors: 
                         output.append({"incorrect": incorrect_sent, "correct": correct_sent, "error": error})
+                        all_output.append({"incorrect": incorrect_sent, "correct": correct_sent, "error": error})
                 
                 
                 fce_txt_dir_dataset = '{}{}/{}/'.format(self.results_dir, data_type, os.path.splitext(f)[0])
@@ -271,6 +273,11 @@ class FCECorpusHandler:
                     writer.writerows(output)
                 
                 
+                
+        with open(self.results_dir + "all_converted.csv", "w") as outfile:
+            writer = csv.DictWriter(outfile, fieldnames=fields)
+            writer.writeheader()
+            writer.writerows(all_output)
 
         print("Finished writing {} files".format(data_type))
 
