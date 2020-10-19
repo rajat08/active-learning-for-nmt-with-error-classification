@@ -259,9 +259,9 @@ class FCECorpusHandler:
                     # error_tags.append(errors)
                     for error in errors: 
                         output.append({"incorrect": incorrect_sent, "correct": correct_sent, "error_tag": error['tag'],
-                         "inc_word": error['incorrect'], "cor_word": error['correct'], "start_off": error['start_off'], "end_off":['end_off']})
+                         "inc_word": error['incorrect'], "cor_word": error['correct'], "start_off": error['start_off'], "end_off":error['end_off']})
                         all_output.append({"incorrect": incorrect_sent, "correct": correct_sent, "error_tag": error['tag'],
-                         "inc_word": error['incorrect'], "cor_word": error['correct'], "start_off": error['start_off'], "end_off":['end_off']})
+                         "inc_word": error['incorrect'], "cor_word": error['correct'], "start_off": error['start_off'], "end_off":error['end_off']})
                 
                 
                 fce_txt_dir_dataset = '{}{}/{}/'.format(self.results_dir, data_type, os.path.splitext(f)[0])
