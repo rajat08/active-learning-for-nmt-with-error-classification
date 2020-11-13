@@ -1,77 +1,77 @@
-Error Code,Level 1 Category,Level 2 Category,Level 3 Category,Category Code,Frequency (as per image from google drive)
-AG,Agreement,Misselection,Grammar,GM,1645
-AGA,Agreement,Misselection,Grammar,GM,11537
-AGD,Agreement,Misselection,Grammar,GM,8813
-AGN,Agreement,Misselection,Grammar,GM,35605
-AGQ,Agreement,Misselection,Grammar,GM,1427
-AGV,Agreement,Misselection,Grammar,GM,56747
-AS,Argument Structure,,Syntax,GM,7366
-CD,Determiners,Determiners/Countability,Grammar,GM,115
-CE,Compound error,style?,Discourse,DS,12207
-CL,,Collocation,Semantic,SM,1203
-CN,Noun Countability,Determiners/Countability,Grammar,GM,9495
-CQ,Quantifier countability,Determiners/Countability,Grammar,GM,3688
-DA,Derivation,,Tempted for grammar,GM,8612
-DC,Derivation,,Grammar,GM,974
-DD,Determiners,,Grammar,GM,5888
-DI,Determiners,Determiners/Countability,Grammar,GM,577
-DJ,Derivation,,Grammar,GM,37728
-DN,Derivation,,Grammar,GM,35091
-DQ,Quantifier Derivation,Determiners/Countability,Grammar,GM,734
-DT,Preposition Derivation,,Grammar,GM,1627
-DV,Derivation,,Grammar,GM,10508
-DY,Derivation,,Grammar,GM,21613
-FA,Form,,Grammar,GM,1109
-FD,Determiners,Determiners/Countability,Grammar,GM,7060
-FJ,Form,,Grammar,GM,3612
-FN,Form,,Grammar,GM,61148
-FQ,Quantifier,Determiners/Countability,Grammar,GM,776
-FV,Form,,Grammar,GM,88343
-FY,Form,,Grammar,GM,907
-IA,Case,Misselection,Grammar,GM,454
-ID,Idiom,Idiom,Semantic,SM,10564
-IJ,Comparative,,Grammar,GM,5502
-IN,Number/case,Misselection,Grammar,GM,10566
-IQ,Number/case,Misselection,Grammar,GM,1091
-IV,Aspect/Tense,Misselection,Grammar,GM,21106
-IY,Aspect/Tense,Misselection,Grammar,GM,174
-L,Register?,,discourse,DS,18874
-M,content-word,missing,lexis,LX,28290
-MA,function word,missing,lexis,LX,56081
-MC,function word,missing,lexis,LX,26522
-MD,content-word,missing,lexis,LX,176782
-MJ,function word,missing,lexis,LX,4702
-MN,content-word,missing,lexis,LX,20286
-MP,punctuation,orthography,orthography,OT,135877
-MQ,content-word,missing,lexis,LX,8656
-MT,content-word,missing,lexis,LX,81749
-MV,function word,missing,lexis,LX,47377
-MY,function word,missing,lexis,LX,14392
-R,Replacement,omission/addition,lexis,LX,78546
-RA,Replacement,omission/addition,lexis,LX,33753
-RC,replacement,omission/addition,lexis,LX,12785
-RD,replacement,omission/addition,lexis,LX,38716
-RJ,replacement,omission/addition,lexis,LX,49657
-RN,replacement,omission/addition,lexis,LX,112763
-RP,replacement,omission/addition,lexis,LX,285323
-RQ,replacement,omission/addition,lexis,LX,8966
-RT,replacement,omission/addition,lexis,LX,195008
-RV,replacement,omission/addition,lexis,LX,172070
-RY,replacement,omission/addition,lexis,LX,46115
-S,spelling,spelling,orthography,OT,264538
-SA,spelling - american,spelling,orthography,OT,15241
-SX,spelling - real word,spelling,orthography,OT,48307
-TV,Verb Tense,Misselection,Grammar,GM,183310
-U,content-word,omission,lexis,LX,13450
-UA,function word,omission,lexis,LX,21739
-UC,function word,omission,lexis,LX,11888
-UD,content-word,omission,lexis,LX,82371
-UJ,function word,omission,lexis,LX,3682
-UN,content-word,omission,lexis,LX,11130
-UP,Punctuation,ommission/orthography,orthography,OT,115214
-UQ,content-word,omission,lexis,LX,2876
-UT,content-word,omission,lexis,LX,56246
-UV,function word,omission,lexis,LX,24002
-UY,function word,omission,lexis,LX,16998
-W,word order,misordering,Grammar,GM,76586
-X,negation,,grammar,GM,4180
+Error Code,Level 1 Category,Level 2 Category,Level 3 Category,Category Code,Frequency (as per image from google drive),,,,,Error Type,Frequency 
+AG,Agreement,Misselection,Grammar,GM,1645,,,,,Grammar,725714
+AGA,Agreement,Misselection,Grammar,GM,11537,,,,,Semantic,11767
+AGD,Agreement,Misselection,Grammar,GM,8813,,,,,Discourse,31081
+AGN,Agreement,Misselection,Grammar,GM,35605,,,,,Lexis,1742921
+AGQ,Agreement,Misselection,Grammar,GM,1427,,,,,Orthography,579177
+AGV,Agreement,Misselection,Grammar,GM,56747,,,,,,
+AS,Argument Structure,,Syntax,GM,7366,,,,,,
+CD,Determiners,Determiners/Countability,Grammar,GM,115,,,,,,
+CE,Compound error,style?,Discourse,DS,12207,,,,,,
+CL,,Collocation,Semantic,SM,1203,,,,,,
+CN,Noun Countability,Determiners/Countability,Grammar,GM,9495,,,,,,
+CQ,Quantifier countability,Determiners/Countability,Grammar,GM,3688,,,,,,
+DA,Derivation,,Tempted for Grammar,GM,8612,,,,,,
+DC,Derivation,,Grammar,GM,974,,,,,,
+DD,Determiners,,Grammar,GM,5888,,,,,,
+DI,Determiners,Determiners/Countability,Grammar,GM,577,,,,,,
+DJ,Derivation,,Grammar,GM,37728,,,,,,
+DN,Derivation,,Grammar,GM,35091,,,,,,
+DQ,Quantifier Derivation,Determiners/Countability,Grammar,GM,734,,,,,,
+DT,Preposition Derivation,,Grammar,GM,1627,,,,,,
+DV,Derivation,,Grammar,GM,10508,,,,,,
+DY,Derivation,,Grammar,GM,21613,,,,,,
+FA,Form,,Grammar,GM,1109,,,,,,
+FD,Determiners,Determiners/Countability,Grammar,GM,7060,,,,,,
+FJ,Form,,Grammar,GM,3612,,,,,,
+FN,Form,,Grammar,GM,61148,,,,,,
+FQ,Quantifier,Determiners/Countability,Grammar,GM,776,,,,,,
+FV,Form,,Grammar,GM,88343,,,,,,
+FY,Form,,Grammar,GM,907,,,,,,
+IA,Case,Misselection,Grammar,GM,454,,,,,,
+ID,Idiom,Idiom,Semantic,SM,10564,,,,,,
+IJ,Comparative,,Grammar,GM,5502,,,,,,
+IN,Number/case,Misselection,Grammar,GM,10566,,,,,,
+IQ,Number/case,Misselection,Grammar,GM,1091,,,,,,
+IV,Aspect/Tense,Misselection,Grammar,GM,21106,,,,,,
+IY,Aspect/Tense,Misselection,Grammar,GM,174,,,,,,
+L,Register?,,Discourse,DS,18874,,,,,,
+M,content-word,missing,Lexis,LX,28290,,,,,,
+MA,function word,missing,Lexis,LX,56081,,,,,,
+MC,function word,missing,Lexis,LX,26522,,,,,,
+MD,content-word,missing,Lexis,LX,176782,,,,,,
+MJ,function word,missing,Lexis,LX,4702,,,,,,
+MN,content-word,missing,Lexis,LX,20286,,,,,,
+MP,punctuation,Orthography,Orthography,OT,135877,,,,,,
+MQ,content-word,missing,Lexis,LX,8656,,,,,,
+MT,content-word,missing,Lexis,LX,81749,,,,,,
+MV,function word,missing,Lexis,LX,47377,,,,,,
+MY,function word,missing,Lexis,LX,14392,,,,,,
+R,Replacement,omission/addition,Lexis,LX,78546,,,,,,
+RA,Replacement,omission/addition,Lexis,LX,33753,,,,,,
+RC,replacement,omission/addition,Lexis,LX,12785,,,,,,
+RD,replacement,omission/addition,Lexis,LX,38716,,,,,,
+RJ,replacement,omission/addition,Lexis,LX,49657,,,,,,
+RN,replacement,omission/addition,Lexis,LX,112763,,,,,,
+RP,replacement,omission/addition,Lexis,LX,285323,,,,,,
+RQ,replacement,omission/addition,Lexis,LX,8966,,,,,,
+RT,replacement,omission/addition,Lexis,LX,195008,,,,,,
+RV,replacement,omission/addition,Lexis,LX,172070,,,,,,
+RY,replacement,omission/addition,Lexis,LX,46115,,,,,,
+S,spelling,spelling,Orthography,OT,264538,,,,,,
+SA,spelling - american,spelling,Orthography,OT,15241,,,,,,
+SX,spelling - real word,spelling,Orthography,OT,48307,,,,,,
+TV,Verb Tense,Misselection,Grammar,GM,183310,,,,,,
+U,content-word,omission,Lexis,LX,13450,,,,,,
+UA,function word,omission,Lexis,LX,21739,,,,,,
+UC,function word,omission,Lexis,LX,11888,,,,,,
+UD,content-word,omission,Lexis,LX,82371,,,,,,
+UJ,function word,omission,Lexis,LX,3682,,,,,,
+UN,content-word,omission,Lexis,LX,11130,,,,,,
+UP,Punctuation,ommission/Orthography,Orthography,OT,115214,,,,,,
+UQ,content-word,omission,Lexis,LX,2876,,,,,,
+UT,content-word,omission,Lexis,LX,56246,,,,,,
+UV,function word,omission,Lexis,LX,24002,,,,,,
+UY,function word,omission,Lexis,LX,16998,,,,,,
+W,word order,misordering,Grammar,GM,76586,,,,,,
+X,negation,,Grammar,GM,4180,,,,,,

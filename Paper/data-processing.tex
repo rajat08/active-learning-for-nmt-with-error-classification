@@ -1,0 +1,33 @@
+We divided data processing into \emph{x} steps -
+    (1) Mapping different error labels to five main error labels;
+    (2) Combining the dataset with both correct and incorrect sentences; 
+    (3) Encoding error labels and building an error vector;
+    (4) Ensuring sentence "uniqueness"; and
+
+\subparagraph{Mapping Error Labels.}
+The approximately 80 different error labels were mapped to the their five higher 
+levels manually. \cite{NichollsFce} describes the tagging process for the error labels, 
+where tags starting with "F" indicated incorrect form, "M" indicated missing, "R" indicated replacing,
+"U" undicated unnecessary, etc. Further, the taxonomy of translation errors from \cite{costaTaxonomyErrorLabels}
+was used for the appropriate mappings. 
+
+\subparagraph{Combining dataset with correct and incorrect sentences.}
+The FCE text corpus provides the examination scripts in an XML format. These are initially converted to "txt" files, 
+and then parsed into a comma separated format (csv) with every sentence/group of sentences with their error tags. 
+In case of multiple errors per sample, the sentence/group is repeated for every tag in the csv file. 
+Since the Cambridge FCE corpus provided us with error tags for sentences along with their 
+corrections, the correct sentences are filtered out separately. Further, an additional "CO" label denoting correctness
+is attached to each of these sentences and then are appended to the dataset containing incorrect ones.
+
+\subparagraph{Encoding Error Labels \& Error vector.}
+Classifying sentences grouped into six categories (5 error labels and 1 correct label) looks to be a multi-class 
+classification problem, however, it is possible that a given sentence or group of sentences might have multiple errors 
+in them. Thus, every sample's error tag is one-hot-encoded: six new columns are added, each for a given error tag, with 
+a "1" on the actual error tag's column. An error vector is built using these one-hot-encodings, each vector for a given sample 
+of length equalling 6. As sentences can have multiple errors, those samples with repeating rows are grouped, and their 
+error vectors are aggregated. 
+
+\subparagraph{Sentence Uniqueness.}
+Further, it is possible to have a sentence that is correct in one context, but has errors in 
+another context (a simple example would be closing statements). For this reason, those samples that have a "1" for both "CO" and 
+other error labels are dropped from the dataset. 
